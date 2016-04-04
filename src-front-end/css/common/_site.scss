@@ -1,0 +1,125 @@
+.wrapper {
+	@include font-size(15);
+	max-width: $break-large - $site-left-margin;
+	margin-left: $site-left-margin;
+}
+
+.main-content {
+	background-color: $color-light;
+	@include box-shadow(5px, 5px, 5px, 0, rgba(0,0,0,0.1));
+	float: left;
+	padding-bottom: 20px;
+	width: 100%;
+	
+}
+
+.interstitial-panel {
+	margin: 20px auto 0;
+	padding: 0 20px;
+	width: 280px;
+	
+	.interstitial-logo {
+		background: url('../Images/brand-invert.png') no-repeat;
+		height: 29px;
+		width: 151px;
+	}
+		
+	p {
+		font-size: 16px;
+	}
+}
+
+.page-content {
+	float: left;
+}
+
+.generic-search-ad .component, .rail-right-components .component {
+	@include generic-margin-top();
+	float: left;
+	clear: both;
+	width: 100%;
+    
+}
+
+/*******************************************************
+ *
+ * MEDIA QUERY LARGER THAN BREAK SMALL
+ *
+ *******************************************************/
+@media (min-width: $break-small + 1px) {
+	.main-content .page-content .custom-row {
+        //margin-left: -10;
+        //margin-right: -10;    
+    }
+}
+
+/*******************************************************
+ *
+ * MEDIA QUERY 960 BREAK POINT LG
+ *
+ *******************************************************/
+@media (max-width: $break-large) {
+	.container {
+		max-width: $break-large;
+		width: 100%;
+	}
+}
+
+/*******************************************************
+ *
+ * MEDIA QUERY 768 BREAK POINT MD
+ *
+ *******************************************************/
+@media (max-width: $break-medium) {
+	.wrapper {
+		margin-left: 0;
+		@include min-height(600);
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.container {
+		max-width: $break-medium;
+		width: 100%;
+	}
+    #nanoRepProxyContainer {
+		display:none;
+	}
+	
+}
+
+/*******************************************************
+ *
+ * MEDIA QUERY 652 BREAK POINT 
+ *
+ *******************************************************/
+@media (max-width: $break-small) {
+	.generic-search-ad {
+        width: auto;
+    }
+
+    .generic-content {
+        float: left;
+		width: 100%;
+    }
+
+    .main-content .page-content .custom-row {
+        margin-left: -10px;
+        margin-right: -10px;   
+    }
+
+	.main-content .page-content .column-content{
+		
+    }
+}
+
+/*******************************************************
+ *
+ * MEDIA QUERY 320 BREAK POINT 
+ *
+ *******************************************************/
+@media (max-width: $break-min-mobile-portrait) {
+	.wrapper {
+		width: $break-min-mobile-portrait;
+	}
+}

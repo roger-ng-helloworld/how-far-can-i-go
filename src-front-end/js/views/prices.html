@@ -1,0 +1,17 @@
+<div class="price-panel col-xs-16">
+<h2>Deals</h2>
+<ul>
+	
+	{{#products}}
+		<li>
+			<div class="img"><img src="{{img}}" /></div>
+			<div class="city">{{city}}</div>
+			<div class="date">{{date}} | {{journeyType}}</div>
+			<div class="journey-type"></div>
+			<div class="price">${{price}}</div>
+			<div class="cta"><a class="btn full" href="{{cta}}" target="_blank">View</a></div>
+		</li>
+	{{/products}}
+	
+</ul>
+</div>

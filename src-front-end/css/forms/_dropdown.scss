@@ -1,0 +1,29 @@
+﻿// Dropdown list
+select {
+	@include border-radius(3px);
+	height: 36px;
+
+	option {
+		background-color: #e5e5e5;
+		border-top: 1px dotted $color-dark-bkgd;
+		height: 36px;
+	}
+}
+
+.chosen-container {
+	height: 34px !important;
+	width: auto !important;
+}
+
+.chosen-single {
+	height: 34px!important;
+	padding-top: 5px !important;
+
+	div {
+		top: 4px !important;
+	}
+}
+
+.chosen-results li {
+	padding: 12px 6px !important;
+}

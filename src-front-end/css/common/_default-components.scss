@@ -1,0 +1,91 @@
+html, body {
+	background: $color-bkgd;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	color: $color-pre-dark;
+}
+
+ul {
+	list-style: none;
+}
+
+// Typography
+h1 {
+	@include font-size(28);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(30);
+	
+}
+
+h2 {
+	@include font-size(24);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(26);
+}
+
+h3 {
+	@include font-size(21);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(23);
+}
+
+h4 {
+	@include font-size(20);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(22);
+}
+
+h5 {
+	@include font-size(18);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(20);
+}
+
+h6 {
+	@include font-size(16);
+	font-weight: bold;
+	@include generic-margin-top();
+	@include line-height(18);
+}
+
+p {
+	@include generic-margin-top(10);
+	@include line-height(18);
+}
+
+a {
+	color: $color-primary;
+	&:active, &:visited, &:link {
+		color: $color-primary;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: $color-btn;
+	}
+}
+
+// Line break
+hr {
+	border-top: 1px dotted $color-dark-bkgd;
+	@include generic-margin-top();
+	margin-bottom: 0px;
+	float: left;
+	width: 100%;
+}
+
+@media (max-width: $break-medium) {
+	html, body {
+		font-size: 76%;
+	}
+}
+
+
+
+
+

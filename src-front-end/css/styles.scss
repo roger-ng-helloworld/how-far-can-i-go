@@ -1,0 +1,135 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "vendors/bootstrap";
+@import "vendors/nouislider";
+@import "colors/colors";
+@import "common/common";
+@import "forms/forms";
+
+h1 {
+	margin: 0;
+}
+
+.right-rail {
+	@include generic-margin-top(10);
+}
+
+.map {
+	width:100%; 
+	min-height:600px; 
+	background-color: #cccccc;
+	margin-top: 20px;
+	.google-maps {
+		min-height:600px; 
+	} 
+}
+
+.prices {
+    height: 685px;
+    @include generic-margin-top(10);
+
+    .price-panel {
+		background-color: #eeeeee;
+		padding-bottom: 10px;
+	}
+	h2 {
+		@include generic-margin-top(10);
+	}
+
+	ul {
+		height: 629px;
+		overflow-y: scroll;
+		margin-top: 10px;
+		li {
+			margin-top: 10px;
+			background-color: #ffffff;
+			border-radius: 4px;
+			padding: 8px;
+
+			&:first-child {
+
+			}
+
+			.img {
+				height: 100px;
+				width: 100%;
+				background-color: #eeeeee;
+				overflow: hidden;
+				img {
+					//height: 100px;
+				}
+			}
+			.city {
+				color: $color-primary;
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.date {
+
+			}
+			.journey-type {
+
+			}
+			.price {
+				color: $color-btn;
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.cta {
+				a {
+					
+				}
+				
+			}
+		}
+	}
+}
+
+.slider {
+	.budget {
+		color: $color-btn;
+		font-weight: bold;
+		@include font-size(20);
+	}
+}
+
+.gs-img {
+
+}
+.gs-city {
+	color: $color-primary;
+	font-weight: bold;
+	font-size: 20px;
+}
+.gs-date {
+
+}
+.gs-journey-type {
+
+}
+.gs-price {
+	color: $color-btn;
+	font-weight: bold;
+	font-size: 20px;
+}
+.gs-cta {
+	a {
+		
+	}
+	
+}
+
+@media (max-width: $break-medium) {	
+	.right-rail {
+		width: 100%;
+    	float: left;
+	}
+	
+}
+
+
+
+
+
+
+

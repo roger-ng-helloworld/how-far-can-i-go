@@ -1,0 +1,492 @@
+﻿.hellorbot {
+	position: relative;
+	z-index: 2000;
+
+	.twitter-typeahead {
+		width: 100%;
+	}
+
+	.dropdown {
+		//float: left;
+		//padding-top: 10px;
+		//width: 100%;
+		select {
+            @include generic-margin-top(10);
+			width: 100%;
+		}
+	}
+
+	.chosen-container {
+		width: 50% !important;
+	}
+    
+    .btn-close-panel {
+        float: left;
+        width: 100%;    
+        .btn-close {
+            float: right;
+	    }
+    }
+	
+	.slide-panel {
+		background-color: $color-light;
+		display: none;
+		float: left;
+		padding: 10px 4px 20px 4px;
+		width: 100%;
+        
+        hr {
+            margin: 0 0 10px 0;
+        }
+	}
+
+	p {
+		float: left;
+		width: 100%;
+	}
+
+	// TODO clean up
+	// Calendar
+	.calendar-panel {
+		
+
+		.three-days-before-after {
+			float: left;
+			@include generic-margin-top(10);
+		}
+
+		
+	}
+
+	.calendar {
+		@include generic-margin-top(4);		
+		.ui-widget-header {
+			background-color: $color-btn;
+			float: left;
+			@include generic-margin-top(10);
+			width: 100%;
+		}
+
+		.dp-highlight .ui-state-default {
+			background: $color-primary;
+			color: #FFF;
+		}
+		.ui-datepicker {
+			width: 100% !important;
+		}
+		.ui-datepicker-multi .ui-datepicker-group {
+			float:none;
+		}
+		#datepicker {
+			height: 300px;
+			overflow-x: scroll;
+		}
+		.ui-widget { font-size: 100% }
+
+		.ui-datepicker td span, .ui-datepicker td a {
+			padding: 1em .2em;
+			color: $color-dark-bkgd;
+		}
+	}
+	// Calendar
+
+	.fake-input {
+		background-color: $color-light !important;
+		background-repeat: no-repeat !important;
+		background-position: right 4px !important;
+        height: auto !important;
+		padding-bottom: 10px;
+		
+		
+		&.active {
+			@include border-radius(5px 5px 0 0)
+		}
+
+		li {
+			float: left;
+			width: 100%;
+		}
+
+		span {
+			padding: 0;
+			@include generic-margin-top(5);
+		}
+	}
+
+	.checkbox {
+		float: left;
+		@include generic-margin-top(10);
+        margin-bottom: -15px;
+		width: 100%;
+		input {
+			display: inline-block;
+		}
+		label {
+			display: inline-block;
+            @include font-size(15);
+            font-weight: normal;
+			@include generic-margin-top(0);
+           
+		}
+	}
+
+    .submit-panel {
+        .btn {
+            //float: right;
+        }
+    }
+
+	.btn-tabs {
+		float: left;
+		height: auto;
+		width: 100%;
+		
+		a {
+			background-color: $color-primary;
+			border-left: 2px solid white;
+			border-top: 1px solid white;
+			border-right: 2px solid white;
+			@include border-radius(6px 6px 0 0);
+			display: block;
+			height: auto;
+			text-align: center;
+			padding: 5px 0 2px;
+		}
+		
+		a:first-child {
+			border-left: none;
+		}
+
+		a:last-child {
+			border-right: none;
+		}
+
+		a:hover, a:active {
+			span {
+				color: $color-pre-dark;
+			}
+		}
+
+		a.active {
+			background-color: $color-bkgd;
+			cursor: default;
+
+			i {
+				background-position: 0 0;
+			}
+		
+			span {
+				color: $color-pre-dark;
+			}
+		}
+
+		a i {
+			display: block;
+			margin: 0 auto 10px auto;
+		}
+
+		a .icon-flight {
+			height: 30px;
+			width: 30px;			
+			@include svg-background-image('../Images/icon-tab-product-air.svg', '../Images/icon-tab-product-air.png', 0 -30px);
+		}
+
+		a .icon-hotel{
+			height: 30px;
+			width: 30px;			
+			@include svg-background-image('../Images/icon-tab-product-hotel.svg', '../Images/icon-tab-product-hotel.png', 0 -30px);
+		}
+
+		a .icon-car{
+			height: 30px;
+			width: 30px;			
+			@include svg-background-image('../Images/icon-tab-product-car.svg', '../Images/icon-tab-product-car.png', 0 -30px);
+		}
+
+		a .icon-flight-hotel {
+			height: 30px;
+			width: 60px;			
+			@include svg-background-image('../Images/icon-tab-product-pkg.svg', '../Images/icon-tab-product-pkg.png', 0 -30px);
+		}
+
+		a span {
+			color: $color-light;
+			display: block;
+			@include font-size(12);
+			height: 20px;
+			overflow: hidden;
+			width: 100%;
+			white-space: nowrap;
+		}
+	}
+
+	.btn-tabs-secondary {
+		border-bottom: 1px solid $color-primary;
+		@include generic-margin-top();
+	}
+
+	.btn-tabs-secondary a {
+		border-bottom: 3px solid $color-bkgd;
+		color: $color-pre-dark;
+		display: inline-block;
+		font-weight: bold;
+		padding: 0 5px 4px 5px;
+		
+		&.active {
+			border-bottom: 3px solid $color-primary;
+		}
+	}
+
+	.hellorbot-component {
+		background-color: $color-bkgd;
+		display: none;
+		padding: 0 10px 20px 10px;
+	}
+
+	.sub-product {
+		display: none;
+		float: left; 
+		position: relative;
+		width: 100%;
+		z-index: 5000;
+		
+	}
+
+	.rooms {
+		>li {
+			border-top: 1px dotted #666666;
+			padding-bottom: 20px;
+
+			&:first-child {
+				border-top: 0;
+			}
+        }
+
+        li .dropdown label {
+            @include generic-margin-top(10);
+
+        }
+	} 
+
+	.hellorbot-flight {
+        .btn-tabs-secondary a {
+			width: 32%;
+		}
+
+		.travellers-panel {
+			section .age-categories {
+				float: left;
+				@include generic-margin-top(10);
+				width: 100%;
+
+			}
+
+			.dropdown-adult {
+                margin-top: 0;
+            }
+		}
+
+		.additional-search {
+			.preferred-airlines {
+				position: relative;
+				z-index: 1000;
+			}
+		}
+
+		.locations-calendars-panel 
+		{
+			.fake-input {
+				label {
+					@include generic-margin-top(0);
+				}
+
+				p {
+					@include generic-margin-top(0);
+				}
+
+				li {
+					float: left;
+					margin-bottom: 10px;
+					width: 100%;
+					border-top: 1px dotted #666666;
+					padding-top: 10px;
+					&:first-child {
+						border-top: 0;
+						padding-top: 0;
+					}
+				}
+			}
+
+            input[type=text] {
+                background-color: $color-list-zebra-dark;
+            }			
+
+			.slide-panel {
+				li {
+					border-top: 1px dotted #666666;
+					padding-bottom: 20px;
+
+					&:first-child {
+						border-top: 0;
+					}
+				}
+
+				.add-flight {
+					float: left;
+					@include generic-margin-top(10);
+					width: 100%;
+				}
+			}
+        }
+
+		.flight-to-city input {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.flight-from-city input,
+		.flight-to-city input {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.locations-calendars {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.calendar-flight {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-calendar.svg', '../Images/icon-form-calendar.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.travellers-flight {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-travellers.svg', '../Images/icon-form-travellers.png', $color-light right 4px / 28px 28px no-repeat);
+			
+		}
+	}
+
+	.hellorbot-hotel {
+		.btn-tabs-secondary a {
+			width: 48%;
+		}
+
+		.hotel-address-panel {
+            input[type=text] {
+                background-color: $color-list-zebra-dark;
+            }
+        }
+
+		.hotel-address-panel .fake-input {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+        .poi input {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+        .calendar-hotel {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-calendar.svg', '../Images/icon-form-calendar.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+        .room-hotel {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-room.svg', '../Images/icon-form-room.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.add-remove-room {
+			float: left;
+		}
+	}
+
+	.hellorbot-car {
+        .pick-drop-location {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+        .calendar-pick-drop {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-calendar.svg', '../Images/icon-form-calendar.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+		.additional-search {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-additional.svg', '../Images/icon-form-additional.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+        
+        .pick-drop-location-panel {
+            position: relative;
+            z-index: 10;
+        }
+
+        .pick-drop-location-panel .fake-input,
+        .additional-search-panel .fake-input
+        {
+            label {
+                float: left;
+                @include generic-margin-top(5);
+                width: 100%;
+            }
+            
+            p {
+                float: left;
+                @include generic-margin-top(0);
+                width: 100%;    
+            }
+        }    
+
+		.pick-drop-location-panel .slide-panel,
+        .additional-search-panel .slide-panel
+        {
+            input[type=text] {
+                background-color: $color-list-zebra-dark;
+            }
+        }
+	}
+
+	.hellorbot-package {
+		.package-from-city input,
+		.package-to-city input {
+			border-right: 4px $color-light solid;
+			//@include svg-background-image('../Images/icon-form-location.svg', '../Images/icon-form-location.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+        
+        .calendar-package-flight,
+        .calendar-package-hotel {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-calendar.svg', '../Images/icon-form-calendar.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+
+        .room-package {
+			border-right: 4px $color-light solid;
+			@include svg-background-image('../Images/icon-form-room.svg', '../Images/icon-form-room.png', $color-light right 4px / 28px 28px no-repeat);
+		}
+        
+        
+	}
+
+	.tt-dataset-genericAutoFill {
+		
+	}
+
+	
+}
+
+@media (max-width: $break-min-mobile-landscape) {
+	.hellorbot {
+		.btn-tabs a span {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: $break-small) {
+	.journeys a {
+		@include font-size(14);
+	}
+}

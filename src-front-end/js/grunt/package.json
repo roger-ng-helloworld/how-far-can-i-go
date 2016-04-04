@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-html-convert": "0.0.2",
+    "grunt-jsttojs": "latest",
+    "matchdep": "latest"
+  }
+}
